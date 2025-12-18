@@ -1,0 +1,36 @@
+{
+  "name": "appointment-system",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Appointment system - Node + TypeScript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec \"ts-node --esm src/index.ts\"",
+    "build": "tsc -p tsconfig.json --outDir dist",
+    "start": "node dist/index.js",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "format": "prettier --write 'src/**/*.{ts,tsx,js,json,md}'",
+    "clean": "rm -rf dist && rm -rf node_modules/.cache",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.3",
+    "@types/node": "^25.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.50.0",
+    "@typescript-eslint/parser": "^8.50.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "nodemon": "^3.1.11",
+    "prettier": "^3.7.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  },
+  "license": "MIT"
+}
