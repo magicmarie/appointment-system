@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    image: node:18
+    working_dir: /app
+    volumes:
+      - ./:/app:delegated
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    command: nodemon --watch src --ext ts --exec "node --loader ts-node/esm src/index.ts"
+    depends_on:
+      - mongodb
+      - rabbitmq
+    stdin_open: true
+    tty: true
