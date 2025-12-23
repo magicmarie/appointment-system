@@ -7,6 +7,9 @@ export * from './value-objects/Appointment_status.js'
 export * from './value-objects/Email.js'
 export * from './value-objects/Phone_number.js'
 
+// Repositories (ports)
+export * from './repositories/AppointmentRepository.js'
+
 // Events
 export * from './events/Domain_event.js'
 export * from './events/Appointment_event.js'
