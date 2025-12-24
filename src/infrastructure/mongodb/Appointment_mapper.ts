@@ -1,10 +1,8 @@
-import {
-  Appointment,
-  AppointmentId,
-  Email,
-  PhoneNumber,
-  AppointmentStatus,
-} from '../../domain/index.js'
+import { Appointment } from '../../domain/entities/Appointment.js'
+import { AppointmentId } from '../../domain/value-objects/Appointment_id.js'
+import { Email } from '../../domain/value-objects/Email.js'
+import { PhoneNumber } from '../../domain/value-objects/Phone_number.js'
+import { AppointmentStatus } from '../../domain/value-objects/Appointment_status.js'
 
 // Database document shape
 export interface AppointmentDocument {

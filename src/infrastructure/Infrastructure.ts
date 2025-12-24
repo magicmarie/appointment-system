@@ -19,13 +19,3 @@ export async function shutdownInfrastructure(): Promise<void> {
   console.log('Infrastructure shut down\n')
 }
 
-// Graceful shutdown on process signals
-process.on('SIGINT', async () => {
-  await shutdownInfrastructure()
-  process.exit(0)
-})
-
-process.on('SIGTERM', async () => {
-  await shutdownInfrastructure()
-  process.exit(0)
-})

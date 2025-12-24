@@ -1,5 +1,8 @@
 import { Collection } from 'mongodb'
-import { Appointment, AppointmentId, AppointmentStatus, AppointmentRepository  } from '../../domain/index.js'
+import { Appointment } from '../../domain/entities/Appointment.js'
+import { AppointmentId } from '../../domain/value-objects/Appointment_id.js'
+import { AppointmentStatus } from '../../domain/value-objects/Appointment_status.js'
+import { AppointmentRepository } from '../../domain/repositories/AppointmentRepository.js'
 import { mongoClient } from './MongoDBClient.js'
 import { AppointmentMapper, AppointmentDocument } from './Appointment_mapper.js'
 
